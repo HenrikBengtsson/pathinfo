@@ -10,7 +10,7 @@ paths <- c(
   "C:/hb/../annotationData/organism/Homo_sapiens/Ensembl/79/"
 )
 
-patterns <- c("**", rootPath="annotationData(|,.*)", "organisms",
+patterns <- c("**", rootpath="annotationData(|,.*)", "organisms",
               organism=".*", "**")
 for (kk in seq_along(paths)) {
   print(paths[kk])
@@ -28,7 +28,7 @@ paths <- c(
   "probeData/MyDataSet,UCSF,ACC/Mapping250K_Nsp/"
 )
 
-patterns <- c("**", rootPath="(raw|probe)Data(|,.*)",
+patterns <- c("**", rootpath="(raw|probe)Data(|,.*)",
                     dataset=".*", chiptype=".*")
 for (kk in seq_along(paths)) {
   print(paths[kk])

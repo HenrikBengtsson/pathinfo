@@ -19,6 +19,12 @@ for (kk in seq_along(paths)) {
   mdata <- as.list(mraw)
   str(mdata)
   stopifnot(mdata$organism == "Homo_sapiens")
+  mdata <- as.data.frame(mraw)
+  print(mdata)
+  stopifnot(
+    mdata$path == paths[kk],
+    mdata$organism == "Homo_sapiens"
+  )
 }
 
 # rawData/ and probeData/
@@ -39,6 +45,12 @@ for (kk in seq_along(paths)) {
   stopifnot(
     grepl("MyDataSet", mdata$dataset),
     mdata$chiptype %in% c("GenomeWideSNP_6", "Mapping250K_Nsp")
+  )
+  mdata <- as.data.frame(mraw)
+  print(mdata)
+  stopifnot(
+    mdata$path == paths[kk],
+    mdata$organism == "Homo_sapiens"
   )
 }
 

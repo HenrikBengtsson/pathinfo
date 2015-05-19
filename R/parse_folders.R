@@ -15,7 +15,8 @@ parse_folders <- function(path, patterns, mustWork=TRUE, ...) {
   keys <- names(patterns)
 
   ## Default result
-  res <- structure(vector("list", length=length(patterns)), class="ParsedFolders")
+  res <- structure(vector("list", length=length(patterns)), path=path, class="ParsedFolders")
+
   names(res) <- keys
   for (ii in seq_along(patterns)) {
     res[[ii]] <- list(name=keys[ii], pattern=unname(patterns[ii]), value=NA_character_)
@@ -109,3 +110,11 @@ as.list.ParsedFolders <- function(x, drop=TRUE, ...) {
 
   values
 }
+
+#' @export
+as.data.frame.ParsedFolders <- function(x, ...) {
+  path <- attr(x, "path")
+  x <- as.list(x, drop=TRUE)
+  cbind(path=path, as.data.frame(x))
+}
+

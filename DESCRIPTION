@@ -1,0 +1,12 @@
+Package: pathinfo
+Version: 0.1.0
+Title: File Path Metadata Parser
+Authors@R: c(
+  person("Henrik", "Bengtsson", role=c("aut", "cre", "cph"),
+         email="henrikb@braju.com"))
+Description: Parses directory structures for metadata encoded in structure, directory and file names.
+License: LGPL (>= 2.1)
+LazyLoad: TRUE
+ByteCompile: TRUE
+URL: https://github.com/HenrikBengtsson/pathparser
+BugReports: https://github.com/HenrikBengtsson/pathparser/issues

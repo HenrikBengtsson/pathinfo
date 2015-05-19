@@ -10,8 +10,7 @@
 #'
 #' @export
 parse_folders <- function(path, patterns, mustWork=TRUE, ...) {
-  ## Search the path for the root path
-  parts <- unlist(strsplit(path, split="/", fixed=TRUE))
+  parts <- split_path(path, drop=TRUE)
   nparts <- length(parts)
   keys <- names(patterns)
 

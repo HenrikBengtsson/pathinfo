@@ -5,9 +5,9 @@ library(pathinfo)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # annotationData/
 paths <- c(
-  "annotationData/organisms/Homo_sapiens/Ensembl/79/",
-  "../annotationData,shared/organisms/Homo_sapiens/Ensembl/79/",
-  "C:/hb/../annotationData/organism/Homo_sapiens/Ensembl/79/"
+  A = "annotationData/organisms/Homo_sapiens/Ensembl/79/",
+  B = "../annotationData,shared/organisms/Homo_sapiens/Ensembl/79/",
+  C = "C:/hb/../annotationData/organism/Homo_sapiens/Ensembl/79/"
 )
 
 patterns <- c("**", rootpath="annotationData(|,.*)", "organisms",
@@ -23,9 +23,9 @@ for (kk in seq_along(paths)) {
 
 # rawData/ and probeData/
 paths <- c(
-  "rawData/MyDataSet,UCSF/GenomeWideSNP_6/",
-  "rawData,shared/MyDataSet/GenomeWideSNP_6/",
-  "probeData/MyDataSet,UCSF,ACC/Mapping250K_Nsp/"
+  A = "rawData/MyDataSet,UCSF/GenomeWideSNP_6/",
+  B = "rawData,shared/MyDataSet/GenomeWideSNP_6/",
+  C = "probeData/MyDataSet,UCSF,ACC/Mapping250K_Nsp/"
 )
 
 patterns <- c("**", rootpath="(raw|probe)Data(|,.*)",

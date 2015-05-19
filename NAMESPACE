@@ -2,3 +2,4 @@
 
 S3method(as.list,ParsedFolders)
 export(parse_folders)
+export(split_path)

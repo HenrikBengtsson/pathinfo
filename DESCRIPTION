@@ -8,5 +8,5 @@ Description: Parses directory structures for metadata encoded in structure, dire
 License: LGPL (>= 2.1)
 LazyLoad: TRUE
 ByteCompile: TRUE
-URL: https://github.com/HenrikBengtsson/pathparser
-BugReports: https://github.com/HenrikBengtsson/pathparser/issues
+URL: https://github.com/HenrikBengtsson/pathinfo
+BugReports: https://github.com/HenrikBengtsson/pathinfo/issues
